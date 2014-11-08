@@ -4,7 +4,7 @@
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
                 <i class="fa fa-bars"></i>
             </button>
-            <a class="navbar-brand page-scroll" href="#page-top">
+            <a class="navbar-brand page-scroll" href="/">
                 <span style="color:#e62b1e;">TED<span
                             style="vertical-align: super;font-size:0.6em;">x</span></span><span
                         class="light">HarvardCollege</span>
@@ -18,14 +18,14 @@
                 <li class="hidden">
                     <a href="#page-top"></a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#about">About</a>
+                <li class="<%= current.source=='speakers'?'selected':'' %>">
+                    <a class="page-scroll" href="/speakers">Speakers</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#download">Events</a>
+                <li class="<%= current.source=='team'?'selected':'' %>">
+                    <a class="page-scroll" href="/team">The Team</a>
                 </li>
-                <li>
-                    <a class="page-scroll" href="#contact">Join Us</a>
+                <li class="<%= current.source=='sponsor'?'selected':'' %>">
+                    <a class="page-scroll" href="/sponsor">Sponsor</a>
                 </li>
             </ul>
         </div>
