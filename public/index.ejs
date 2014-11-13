@@ -157,5 +157,52 @@ who we are
 TODO Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
 <script type="text/javascript"
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+<script>
+    // Google Maps Scripts
+    // When the window has finished loading create our google map below
+    google.maps.event.addDomListener(window, 'load', init);
+
+    function init() {
+        // Basic options for a simple Google Map
+        // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+        var mapOptions = {
+            // How zoomed in you want the map to start at (always required)
+            zoom: 15,
+
+            // The latitude and longitude to center the map (always required)
+            center: new google.maps.LatLng(42.375833, -71.1147449), // Sanders Theatre
+
+            // Disables the default Google Maps UI components
+            disableDefaultUI: true,
+            scrollwheel: false,
+            draggable: false,
+            keyboardShortcuts: false,
+
+            // How you would like to style the map.
+            // This is where you would paste any style found on Snazzy Maps.
+            styles: [{
+                featureType: "poi",
+                elementType: "labels",
+                stylers: [
+                    { visibility: "off" }
+                ]
+            }]
+        };
+
+        // Get the HTML DOM element that will contain your map
+        // We are using a div with id="map" seen below in the <body>
+        var mapElement = document.getElementById('map');
+
+        // Create the Google Map using out element and options defined above
+        var map = new google.maps.Map(mapElement, mapOptions);
+
+        // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
+        var myLatLng = new google.maps.LatLng(42.3758795, -71.1145451);
+        new google.maps.Marker({
+            position: myLatLng,
+            map: map
+        });
+    }
+</script>
 
 
