@@ -17,7 +17,6 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 35px;
-  text-transform: uppercase;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
   letter-spacing: 1px;
@@ -53,7 +52,6 @@ a {
 .navbar-custom {
   margin-bottom: 0;
   border-bottom: 1px solid fade(@light, 30%);
-  text-transform: uppercase;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: @dark;
   ::selection {
@@ -79,6 +77,8 @@ a {
   }
   .nav {
     li {
+      text-transform: uppercase;
+
       &.active {
         outline: none;
         background-color: fade(@light, 30%);
@@ -136,14 +136,18 @@ a {
     background: transparent;
   }
   .intro-body {
+    text-align: left;
     display: table-cell;
     vertical-align: middle;
     .brand-heading {
       font-size: 40px;
+      line-height: .8em;
     }
 
     .intro-text {
       font-size: 18px;
+      text-transform: uppercase;
+
     }
   }
 }
