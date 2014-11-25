@@ -50,11 +50,16 @@
 <%- partial("_shared/nav") %>
 
 
-<%- yield %>
+<main class="parallax">
+    <%- yield %>
 
-
-<!-- Footer -->
-<%- partial("_shared/footer") %>
+    <section id="footer" class="parallax-group">
+        <div class="parallax-layer parallax-fore">
+            <!-- Footer -->
+            <%- partial("_shared/footer") %>
+        </div>
+    </section>
+</main>
 
 
 <!-- jQuery Version 1.11.0 -->
