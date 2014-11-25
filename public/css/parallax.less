@@ -85,9 +85,15 @@
 #intro {
   z-index: 30; /* slide under groups 1 and 3 */
 }
-
 #intro .parallax-back {
   background: @dark url(../img/3_shade.jpg) no-repeat scroll bottom center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+#intro .parallax-back.speakers {
+  background: @dark url(../img/12311523265_2daf684b26_o.jpg) no-repeat scroll bottom center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
